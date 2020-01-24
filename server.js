@@ -50,7 +50,7 @@ app.get('/movie', function getMovie(req, res) {
 
 
 if (req.query.avg_vote) {
-  response = response.filter(genre =>
+  response = response.filter(movie =>
     // case insensitive searching
     Number(movie.avg_vote) >= Number(req.query.avg_vote)
   )
